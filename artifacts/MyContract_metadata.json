@@ -58,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"MyFirstContract1.sol": "MyContract"
+			"MyFirstContract.sol": "MyContract"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -72,12 +72,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"MyFirstContract1.sol": {
-			"keccak256": "0xc1b53230d98918cd0234263db4af838195c3b0c70d8a16bf91ae70d44ff23a84",
+		"MyFirstContract.sol": {
+			"keccak256": "0x7c64ac4862a4e08f3d4a6c53badd1c11fda1b62e54c5f1cc10057c536543c069",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5552b490c1f441ab4c441d516f629ea42d6feb8a5ec3ed48d45ebcf06d77cf9a",
-				"dweb:/ipfs/QmfGqpR6RxrA6JTddoBnzvh6ri14C8AMsuQoAFQwduyF6g"
+				"bzz-raw://5c93511d140e3b1b06ea733ea8689a275534d1785688fdf709daf26b882aec86",
+				"dweb:/ipfs/QmUtPRrqsiWxxnBYLX87sZQWx2YHJTKMCXdAjHipweKXnj"
 			]
 		}
 	},
