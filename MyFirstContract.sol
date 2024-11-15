@@ -10,8 +10,12 @@ contract MyContract {
         number = initNumb;
     }
 
+    // Event declaration for when the number is updated
+    event NumberUpdated(uint256 newNumber);
+
     // Function to set the number (can be called after contract deployment)
     function setNumber(uint256 newNumber) public {
         number = newNumber;
+        emit NumberUpdated(newNumber);  // Emit the event
     }
 }

@@ -17,6 +17,19 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "NumberUpdated",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "number",
 				"outputs": [
@@ -71,11 +84,11 @@
 	},
 	"sources": {
 		"MyFirstContract.sol": {
-			"keccak256": "0xc35859dff449df3014b306697ec934f75132e636797c221c3e48eb8316f56850",
+			"keccak256": "0x4ed29c650f14cd90cb85e911dfe58c4d5ff3fe0d207bfe7a16584ad7dd67bb25",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bfbb2366435f0826b65c2c7f0cd123716f6cee381eb0d3b9f194a3bb9d271122",
-				"dweb:/ipfs/QmSFxLAEiRAt5FYvvyidMBBD6MCmGnFLQgoQpKUvrVNMNr"
+				"bzz-raw://a912cdff36b315992a57fc0ed7b338bdf8cdae6e759217cebf2158a9b663b0f5",
+				"dweb:/ipfs/QmeAMp5m4VmBWdwZhYbZjJ7mtXhuCet3sieQw4SrP6jYfS"
 			]
 		}
 	},
