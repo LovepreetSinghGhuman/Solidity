@@ -4,7 +4,27 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +53,11 @@
 	},
 	"sources": {
 		"Contract2.sol": {
-			"keccak256": "0x98f6282abb249868d706acfd1bfdf98e2852bc9a43b71239280b58f09afca811",
+			"keccak256": "0x32e1104d0351a1ebd89074788ba14be511f35834bf318f47ecd518a76040c659",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ec014ea24463ce3ac96c2569696debe4767da7502c0c3ac1ee60920c0db1db4b",
-				"dweb:/ipfs/QmcFp2ruV9VVFp7rGHBnmuyAs2C5dDoiCkYwixQ43teocS"
+				"bzz-raw://ced4371c86208b7266132a5117b70350430dd3e93cebd8c964f4207c81e66317",
+				"dweb:/ipfs/QmcQjxaUgviRBJG9Vr1sLTez4CvdqBC7nHAeYByeFKuW66"
 			]
 		}
 	},
