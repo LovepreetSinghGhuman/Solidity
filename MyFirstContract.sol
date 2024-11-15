@@ -2,14 +2,16 @@
 pragma solidity ^0.8.0;
 
 contract MyContract {
-    uint public number;
+    // using public so the variable is readable without writing a getter.
+    uint256 public number;
 
-    function setNumb(uint numb) public {
-        require(numb >= 0);
-        number = numb; 
-    } 
+    // Constructor that sets the initial value of the number
+    constructor(uint256 initNumb) {
+        number = initNumb;
+    }
 
-    function getNumb() public view returns(uint) {
-        return number;
+    // Function to set the number (can be called after contract deployment)
+    function setNumber(uint256 newNumber) public {
+        number = newNumber;
     }
 }

@@ -6,17 +6,15 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getNumb",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "initNumb",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
 				"inputs": [],
@@ -35,11 +33,11 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "numb",
+						"name": "newNumber",
 						"type": "uint256"
 					}
 				],
-				"name": "setNumb",
+				"name": "setNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -73,11 +71,11 @@
 	},
 	"sources": {
 		"MyFirstContract.sol": {
-			"keccak256": "0x7c64ac4862a4e08f3d4a6c53badd1c11fda1b62e54c5f1cc10057c536543c069",
+			"keccak256": "0xc35859dff449df3014b306697ec934f75132e636797c221c3e48eb8316f56850",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5c93511d140e3b1b06ea733ea8689a275534d1785688fdf709daf26b882aec86",
-				"dweb:/ipfs/QmUtPRrqsiWxxnBYLX87sZQWx2YHJTKMCXdAjHipweKXnj"
+				"bzz-raw://bfbb2366435f0826b65c2c7f0cd123716f6cee381eb0d3b9f194a3bb9d271122",
+				"dweb:/ipfs/QmSFxLAEiRAt5FYvvyidMBBD6MCmGnFLQgoQpKUvrVNMNr"
 			]
 		}
 	},
