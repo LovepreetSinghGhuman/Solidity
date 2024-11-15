@@ -13,6 +13,6 @@ if (window.ethereum == null) {
 const contract = new ethers.Contract(contractAddress, contractABI, provider);
 
 // Listen for the NumberUpdated event
-contract.on("NumberUpdated", (newNumber) => {
-  console.log(`Number updated to ${newNumber}`);
+contract.on("NumberUpdated", (user,newNumber) => {
+  console.log(`User ${user} Number updated to ${newNumber}`);
 });

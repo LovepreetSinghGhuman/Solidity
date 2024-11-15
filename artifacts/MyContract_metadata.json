@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "initNumb",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -30,7 +24,13 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"name": "number",
 				"outputs": [
 					{
@@ -69,7 +69,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"MyFirstContract.sol": "MyContract"
+			"Contract1.sol": "MyContract"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -77,18 +77,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"MyFirstContract.sol": {
-			"keccak256": "0x4ed29c650f14cd90cb85e911dfe58c4d5ff3fe0d207bfe7a16584ad7dd67bb25",
+		"Contract1.sol": {
+			"keccak256": "0x187bf6146baba4a01b2caf30a04a8659df3c33efd06c805920709bda8ba9077b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a912cdff36b315992a57fc0ed7b338bdf8cdae6e759217cebf2158a9b663b0f5",
-				"dweb:/ipfs/QmeAMp5m4VmBWdwZhYbZjJ7mtXhuCet3sieQw4SrP6jYfS"
+				"bzz-raw://76367d11f0279af9a8ca15bf30f7b93b3e116ddfd9ef73ef3c2cdd928638d3d3",
+				"dweb:/ipfs/QmavHV5GacaiGoJ35NY8awaeV9g31NhaAnYbi8aeT8ATYh"
 			]
 		}
 	},
