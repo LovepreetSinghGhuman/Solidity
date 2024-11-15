@@ -27,13 +27,16 @@ contract NumberStorage {
 
     // Function to set the number and comment for the caller's address
     function setNumber(uint256 _newNumber, string memory _newComment) public {
-        // Fetch the old user data
-        UserData storage data = userData[msg.sender];
+        
+        // requires the comment to not be empty
+        require(bytes(_newComment).length > 0, "Comment cannot be empty");
 
-        // Update the user's data
-        data.number = _newNumber;
-        data.comment = _newComment;
-        data.blockNumber = block.number;
+        // Fetch and update the user's data
+        userData[msg.sender] = UserData({
+            number: _newNumber,
+            comment: _newComment,
+            blockNumber: block.number
+        });
 
         // Emit the event with the updated data
         emit NumberUpdated(msg.sender, _newNumber, _newComment, block.number);
