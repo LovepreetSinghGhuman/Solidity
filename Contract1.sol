@@ -2,44 +2,40 @@
 pragma solidity ^0.8.0;
 
 contract NumberStorage {
-    // Struct to hold the data for each address
-    struct Data {
-        uint256 number;             // The number for the address
-        string comment;             // The comment associated with the number
-        uint256 blockNumber;        // The block number when the number was updated
+    // Struct to store the number, comment, and block number
+    struct UserData {
+        uint256 number;
+        string comment;
+        uint256 blockNumber;
     }
 
-    // Mapping to store the data for each address
-    mapping(address => Data) public userData;
+    // Mapping to store UserData for each address
+    mapping(address => UserData) public userData;
 
-    // Event declaration for when a number is updated
-    event NumberUpdated(address indexed user, uint256 oldNumber, uint256 newNumber, string oldComment, string newComment, uint256 blockNumber);
+    // Event to notify when a number is updated
+    event NumberUpdated(address user, uint256 newNumber, string comment, uint256 blockNumber);
 
-    // Constructor to set initial data for the contract deployer
-    constructor(uint256 initialNumber, string memory initialComment) {
-        // Set the initial data for the contract deployer (msg.sender)
-        dataStore[msg.sender] = Data({
-            number: initialNumber,
-            comment: initialComment,
+    // Constructor - Optional: initialize data for the contract deployer
+    constructor(uint256 _initialNumber, string memory _initialComment) {
+        userData[msg.sender] = UserData({
+            number: _initialNumber,
+            comment: _initialComment,
             blockNumber: block.number
         });
-        // Emit an event to log the initial data for the deployer
-        emit NumberUpdated(msg.sender, 0, initialNumber, "", initialComment, block.number);
+        emit NumberUpdated(msg.sender, _initialNumber, _initialComment, block.number);
     }
 
-    // Function to set the number and the comment for the caller (only the caller can update their own data)
-    function setNumber(uint256 newNumber, string calldata newComment) public {
-        // Get the old data for the caller
-        Data storage userData = dataStore[msg.sender];
-        uint256 oldNumber = userData.number;
-        string memory oldComment = userData.comment;
+    // Function to set the number and comment for the caller's address
+    function setNumber(uint256 _newNumber, string memory _newComment) public {
+        // Fetch the old user data
+        UserData storage data = userData[msg.sender];
 
-        // Update the data for the caller
-        userData.number = newNumber;
-        userData.comment = newComment;
-        userData.blockNumber = block.number;  // Store the block number when the update happens
+        // Update the user's data
+        data.number = _newNumber;
+        data.comment = _newComment;
+        data.blockNumber = block.number;
 
-        // Emit the event with the user's address, old data, new data, and the block number
-        emit NumberUpdated(msg.sender, oldNumber, newNumber, oldComment, newComment, block.number);
+        // Emit the event with the updated data
+        emit NumberUpdated(msg.sender, _newNumber, _newComment, block.number);
     }
 }
